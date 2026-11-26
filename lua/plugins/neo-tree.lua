@@ -11,7 +11,8 @@ return {
     opts = {
         popup_border_style = "",       -- or "" to use 'winborder' on Neovim v0.11+
         window = {
-            position = "current",
+            position = "left",
+            width = 35,
             mappings = {
                 ["h"] = { "close_node" },
                 ["l"] = { "open" },
@@ -25,6 +26,6 @@ return {
             },
         },
     },
-    vim.keymap.set("n", "<leader><leader>", "<cmd>Neotree position=float toggle reveal<CR>",
+    vim.keymap.set("n", "<leader><leader>", "<cmd>Neotree position=left toggle reveal<CR>",
         { silent = true, desc = "Neo-Tree Toggle" }),
 }
